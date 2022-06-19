@@ -1,0 +1,28 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="PyPep8Inspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <option name="ignoredErrors">
+        <list>
+          <option value="E116" />
+          <option value="E117" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyUnresolvedReferencesInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredIdentifiers">
+        <list>
+          <option value="Component_ClearCore.ClearCore.focus_motor" />
+          <option value="Component_ClearCore.ClearCore.sick_sensor" />
+          <option value="Component_ClearCore.ClearCore.sick_prox1" />
+          <option value="Component_ClearCore.ClearCore.focus_prox1" />
+          <option value="Component_ClearCore.ClearCore.sick_prox2" />
+          <option value="Component_ClearView.ClearView.servomotor0" />
+          <option value="Component_ClearView.ClearView.brake0" />
+          <option value="Component_ClearCore.ClearCore.sick_motor" />
+          <option value="package_ClearCore.ClearCore.focus_motor" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>
