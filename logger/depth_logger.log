@@ -1,150 +1,150 @@
-2022-06-19 23:08:27,305:INFO:select_pretrained_model_for_inference:1 was pressed. Loading the NYU model...
-2022-06-19 23:08:31,329:INFO:<module>:Model loaded (nyu.h5).
-2022-06-19 23:08:34,597:INFO:load_images_using_tkinter:Loaded Images: ['C:/Time Machine Code/DenseDepth/input_images/1_image.png', 'C:/Time Machine Code/DenseDepth/input_images/11_image.png', 'C:/Time Machine Code/DenseDepth/input_images/119_image.png', 'C:/Time Machine Code/DenseDepth/input_images/140_image.png', 'C:/Time Machine Code/DenseDepth/input_images/267_image.png', 'C:/Time Machine Code/DenseDepth/input_images/308_image.png', 'C:/Time Machine Code/DenseDepth/input_images/312_image.png', 'C:/Time Machine Code/DenseDepth/input_images/358_image.png', 'C:/Time Machine Code/DenseDepth/input_images/377_image.png', 'C:/Time Machine Code/DenseDepth/input_images/470_image.png', 'C:/Time Machine Code/DenseDepth/input_images/499_image.png', 'C:/Time Machine Code/DenseDepth/input_images/626_image.png', 'C:/Time Machine Code/DenseDepth/input_images/762-7627685_spotlight-living-room-stock.png', 'C:/Time Machine Code/DenseDepth/input_images/2020-atlas-amethyst-016-1600x992.png', 'C:/Time Machine Code/DenseDepth/input_images/deken_ispahan_op_een_bed_1600x1600.png', 'C:/Time Machine Code/DenseDepth/input_images/DSCF3790-992x992.png', 'C:/Time Machine Code/DenseDepth/input_images/f94c2916-6a4e-4cbc-9bc1-9f0e0f4ee46c.png', 'C:/Time Machine Code/DenseDepth/input_images/FIELDS+HOUSE+LIVING+ROOM.png', 'C:/Time Machine Code/DenseDepth/input_images/File_033-992x992.png', "C:/Time Machine Code/DenseDepth/input_images/Kit_Out_My_Office's_'HD_Colour'_(blue_photo_)_office_furniture.png", 'C:/Time Machine Code/DenseDepth/input_images/Living_Room_3D_Render_with_Interior_Design_by_NONAGON_studio.png', 'C:/Time Machine Code/DenseDepth/input_images/palettised.png', 'C:/Time Machine Code/DenseDepth/input_images/WhatsApp-Image-2021-01-28-at-19.17.17-2.png']
-2022-06-19 23:08:36,503:INFO:resize_input_image:762-7627685_spotlight-living-room-stock.png has been upscaled from (586, 820) to (608, 832).The encoder architecture expects the image dimensions to be divisible by 32.
-2022-06-19 23:08:39,322:INFO:load_images:f94c2916-6a4e-4cbc-9bc1-9f0e0f4ee46c.png is not in RGB format. Converting to RGB format...
-2022-06-19 23:08:39,383:INFO:resize_input_image:f94c2916-6a4e-4cbc-9bc1-9f0e0f4ee46c.png has been upscaled from (276, 491) to (288, 512).The encoder architecture expects the image dimensions to be divisible by 32.
-2022-06-19 23:08:39,801:INFO:resize_input_image:FIELDS+HOUSE+LIVING+ROOM.png has been upscaled from (664, 1000) to (672, 1024).The encoder architecture expects the image dimensions to be divisible by 32.
-2022-06-19 23:08:40,594:INFO:resize_input_image:Kit_Out_My_Office's_'HD_Colour'_(blue_photo_)_office_furniture.png has been upscaled from (473, 786) to (480, 800).The encoder architecture expects the image dimensions to be divisible by 32.
-2022-06-19 23:08:40,901:INFO:resize_input_image:Living_Room_3D_Render_with_Interior_Design_by_NONAGON_studio.png has been upscaled from (695, 1027) to (704, 1056).The encoder architecture expects the image dimensions to be divisible by 32.
-2022-06-19 23:08:41,016:INFO:load_images:palettised.png is not in RGB format. Converting to RGB format...
-2022-06-19 23:08:41,322:INFO:resize_input_image:palettised.png has been upscaled from (1228, 1050) to (1248, 1056).The encoder architecture expects the image dimensions to be divisible by 32.
-2022-06-19 23:08:41,755:INFO:resize_input_image:WhatsApp-Image-2021-01-28-at-19.17.17-2.png has been upscaled from (900, 1600) to (928, 1600).The encoder architecture expects the image dimensions to be divisible by 32.
-2022-06-19 23:08:41,772:INFO:predict:Currently predicting 1_image.png ...
-2022-06-19 23:08:45,152:INFO:predict:Currently predicting 11_image.png ...
-2022-06-19 23:08:46,383:INFO:predict:Currently predicting 119_image.png ...
-2022-06-19 23:08:47,588:INFO:predict:Currently predicting 140_image.png ...
-2022-06-19 23:08:48,787:INFO:predict:Currently predicting 267_image.png ...
-2022-06-19 23:08:49,932:INFO:predict:Currently predicting 308_image.png ...
-2022-06-19 23:08:51,060:INFO:predict:Currently predicting 312_image.png ...
-2022-06-19 23:08:52,195:INFO:predict:Currently predicting 358_image.png ...
-2022-06-19 23:08:53,317:INFO:predict:Currently predicting 377_image.png ...
-2022-06-19 23:08:54,497:INFO:predict:Currently predicting 470_image.png ...
-2022-06-19 23:08:55,634:INFO:predict:Currently predicting 499_image.png ...
-2022-06-19 23:08:56,785:INFO:predict:Currently predicting 626_image.png ...
-2022-06-19 23:08:57,939:INFO:predict:Currently predicting 762-7627685_spotlight-living-room-stock.png ...
-2022-06-19 23:09:01,761:INFO:predict:Currently predicting 2020-atlas-amethyst-016-1600x992.png ...
-2022-06-19 23:09:06,832:INFO:predict:Currently predicting deken_ispahan_op_een_bed_1600x1600.png ...
-2022-06-19 23:09:14,480:INFO:predict:Currently predicting DSCF3790-992x992.png ...
-2022-06-19 23:09:17,487:INFO:predict:Currently predicting f94c2916-6a4e-4cbc-9bc1-9f0e0f4ee46c.png ...
-2022-06-19 23:09:18,130:INFO:predict:Currently predicting FIELDS+HOUSE+LIVING+ROOM.png ...
-2022-06-19 23:09:20,400:INFO:predict:Currently predicting File_033-992x992.png ...
-2022-06-19 23:09:23,424:INFO:predict:Currently predicting Kit_Out_My_Office's_'HD_Colour'_(blue_photo_)_office_furniture.png ...
-2022-06-19 23:09:24,797:INFO:predict:Currently predicting Living_Room_3D_Render_with_Interior_Design_by_NONAGON_studio.png ...
-2022-06-19 23:09:27,208:INFO:predict:Currently predicting palettised.png ...
-2022-06-19 23:09:31,169:INFO:predict:Currently predicting WhatsApp-Image-2021-01-28-at-19.17.17-2.png ...
-2022-06-19 23:09:35,684:INFO:output_depth_images:1_image.png finished processing! Image can be found in the output_images folder.
-2022-06-19 23:09:35,702:INFO:output_depth_images:1_image_depth_colored.png finished processing! Image can be found in the output_images folder.
-2022-06-19 23:09:35,707:INFO:output_depth_images:1_image_depth.png finished processing! Image can be found in the output_images folder.
-2022-06-19 23:09:36,210:INFO:output_depth_images:1_image_upscaled_depth_colored.png finished processing! Image can be found in the output_images folder.
-2022-06-19 23:09:36,363:INFO:output_depth_images:1_image_upscaled_depth.png finished processing! Image can be found in the output_images folder.
-2022-06-19 23:09:36,480:INFO:output_depth_images:11_image.png finished processing! Image can be found in the output_images folder.
-2022-06-19 23:09:36,496:INFO:output_depth_images:11_image_depth_colored.png finished processing! Image can be found in the output_images folder.
-2022-06-19 23:09:36,503:INFO:output_depth_images:11_image_depth.png finished processing! Image can be found in the output_images folder.
-2022-06-19 23:09:36,982:INFO:output_depth_images:11_image_upscaled_depth_colored.png finished processing! Image can be found in the output_images folder.
-2022-06-19 23:09:37,139:INFO:output_depth_images:11_image_upscaled_depth.png finished processing! Image can be found in the output_images folder.
-2022-06-19 23:09:37,261:INFO:output_depth_images:119_image.png finished processing! Image can be found in the output_images folder.
-2022-06-19 23:09:37,278:INFO:output_depth_images:119_image_depth_colored.png finished processing! Image can be found in the output_images folder.
-2022-06-19 23:09:37,284:INFO:output_depth_images:119_image_depth.png finished processing! Image can be found in the output_images folder.
-2022-06-19 23:09:37,757:INFO:output_depth_images:119_image_upscaled_depth_colored.png finished processing! Image can be found in the output_images folder.
-2022-06-19 23:09:37,913:INFO:output_depth_images:119_image_upscaled_depth.png finished processing! Image can be found in the output_images folder.
-2022-06-19 23:09:38,027:INFO:output_depth_images:140_image.png finished processing! Image can be found in the output_images folder.
-2022-06-19 23:09:38,046:INFO:output_depth_images:140_image_depth_colored.png finished processing! Image can be found in the output_images folder.
-2022-06-19 23:09:38,052:INFO:output_depth_images:140_image_depth.png finished processing! Image can be found in the output_images folder.
-2022-06-19 23:09:38,529:INFO:output_depth_images:140_image_upscaled_depth_colored.png finished processing! Image can be found in the output_images folder.
-2022-06-19 23:09:38,684:INFO:output_depth_images:140_image_upscaled_depth.png finished processing! Image can be found in the output_images folder.
-2022-06-19 23:09:38,770:INFO:output_depth_images:267_image.png finished processing! Image can be found in the output_images folder.
-2022-06-19 23:09:38,786:INFO:output_depth_images:267_image_depth_colored.png finished processing! Image can be found in the output_images folder.
-2022-06-19 23:09:38,793:INFO:output_depth_images:267_image_depth.png finished processing! Image can be found in the output_images folder.
-2022-06-19 23:09:39,267:INFO:output_depth_images:267_image_upscaled_depth_colored.png finished processing! Image can be found in the output_images folder.
-2022-06-19 23:09:39,426:INFO:output_depth_images:267_image_upscaled_depth.png finished processing! Image can be found in the output_images folder.
-2022-06-19 23:09:39,547:INFO:output_depth_images:308_image.png finished processing! Image can be found in the output_images folder.
-2022-06-19 23:09:39,563:INFO:output_depth_images:308_image_depth_colored.png finished processing! Image can be found in the output_images folder.
-2022-06-19 23:09:39,571:INFO:output_depth_images:308_image_depth.png finished processing! Image can be found in the output_images folder.
-2022-06-19 23:09:40,045:INFO:output_depth_images:308_image_upscaled_depth_colored.png finished processing! Image can be found in the output_images folder.
-2022-06-19 23:09:40,204:INFO:output_depth_images:308_image_upscaled_depth.png finished processing! Image can be found in the output_images folder.
-2022-06-19 23:09:40,336:INFO:output_depth_images:312_image.png finished processing! Image can be found in the output_images folder.
-2022-06-19 23:09:40,350:INFO:output_depth_images:312_image_depth_colored.png finished processing! Image can be found in the output_images folder.
-2022-06-19 23:09:40,358:INFO:output_depth_images:312_image_depth.png finished processing! Image can be found in the output_images folder.
-2022-06-19 23:09:40,824:INFO:output_depth_images:312_image_upscaled_depth_colored.png finished processing! Image can be found in the output_images folder.
-2022-06-19 23:09:40,984:INFO:output_depth_images:312_image_upscaled_depth.png finished processing! Image can be found in the output_images folder.
-2022-06-19 23:09:41,091:INFO:output_depth_images:358_image.png finished processing! Image can be found in the output_images folder.
-2022-06-19 23:09:41,109:INFO:output_depth_images:358_image_depth_colored.png finished processing! Image can be found in the output_images folder.
-2022-06-19 23:09:41,117:INFO:output_depth_images:358_image_depth.png finished processing! Image can be found in the output_images folder.
-2022-06-19 23:09:41,597:INFO:output_depth_images:358_image_upscaled_depth_colored.png finished processing! Image can be found in the output_images folder.
-2022-06-19 23:09:41,754:INFO:output_depth_images:358_image_upscaled_depth.png finished processing! Image can be found in the output_images folder.
-2022-06-19 23:09:41,883:INFO:output_depth_images:377_image.png finished processing! Image can be found in the output_images folder.
-2022-06-19 23:09:41,900:INFO:output_depth_images:377_image_depth_colored.png finished processing! Image can be found in the output_images folder.
-2022-06-19 23:09:41,905:INFO:output_depth_images:377_image_depth.png finished processing! Image can be found in the output_images folder.
-2022-06-19 23:09:42,374:INFO:output_depth_images:377_image_upscaled_depth_colored.png finished processing! Image can be found in the output_images folder.
-2022-06-19 23:09:42,528:INFO:output_depth_images:377_image_upscaled_depth.png finished processing! Image can be found in the output_images folder.
-2022-06-19 23:09:42,644:INFO:output_depth_images:470_image.png finished processing! Image can be found in the output_images folder.
-2022-06-19 23:09:42,661:INFO:output_depth_images:470_image_depth_colored.png finished processing! Image can be found in the output_images folder.
-2022-06-19 23:09:42,668:INFO:output_depth_images:470_image_depth.png finished processing! Image can be found in the output_images folder.
-2022-06-19 23:09:43,138:INFO:output_depth_images:470_image_upscaled_depth_colored.png finished processing! Image can be found in the output_images folder.
-2022-06-19 23:09:43,291:INFO:output_depth_images:470_image_upscaled_depth.png finished processing! Image can be found in the output_images folder.
-2022-06-19 23:09:43,390:INFO:output_depth_images:499_image.png finished processing! Image can be found in the output_images folder.
-2022-06-19 23:09:43,404:INFO:output_depth_images:499_image_depth_colored.png finished processing! Image can be found in the output_images folder.
-2022-06-19 23:09:43,410:INFO:output_depth_images:499_image_depth.png finished processing! Image can be found in the output_images folder.
-2022-06-19 23:09:43,868:INFO:output_depth_images:499_image_upscaled_depth_colored.png finished processing! Image can be found in the output_images folder.
-2022-06-19 23:09:44,022:INFO:output_depth_images:499_image_upscaled_depth.png finished processing! Image can be found in the output_images folder.
-2022-06-19 23:09:44,123:INFO:output_depth_images:626_image.png finished processing! Image can be found in the output_images folder.
-2022-06-19 23:09:44,139:INFO:output_depth_images:626_image_depth_colored.png finished processing! Image can be found in the output_images folder.
-2022-06-19 23:09:44,146:INFO:output_depth_images:626_image_depth.png finished processing! Image can be found in the output_images folder.
-2022-06-19 23:09:44,610:INFO:output_depth_images:626_image_upscaled_depth_colored.png finished processing! Image can be found in the output_images folder.
-2022-06-19 23:09:44,766:INFO:output_depth_images:626_image_upscaled_depth.png finished processing! Image can be found in the output_images folder.
-2022-06-19 23:09:44,916:INFO:output_depth_images:762-7627685_spotlight-living-room-stock.png finished processing! Image can be found in the output_images folder.
-2022-06-19 23:09:44,937:INFO:output_depth_images:762-7627685_spotlight-living-room-stock_depth_colored.png finished processing! Image can be found in the output_images folder.
-2022-06-19 23:09:44,947:INFO:output_depth_images:762-7627685_spotlight-living-room-stock_depth.png finished processing! Image can be found in the output_images folder.
-2022-06-19 23:09:45,690:INFO:output_depth_images:762-7627685_spotlight-living-room-stock_upscaled_depth_colored.png finished processing! Image can be found in the output_images folder.
-2022-06-19 23:09:45,940:INFO:output_depth_images:762-7627685_spotlight-living-room-stock_upscaled_depth.png finished processing! Image can be found in the output_images folder.
-2022-06-19 23:09:46,237:INFO:output_depth_images:2020-atlas-amethyst-016-1600x992.png finished processing! Image can be found in the output_images folder.
-2022-06-19 23:09:46,294:INFO:output_depth_images:2020-atlas-amethyst-016-1600x992_depth_colored.png finished processing! Image can be found in the output_images folder.
-2022-06-19 23:09:46,323:INFO:output_depth_images:2020-atlas-amethyst-016-1600x992_depth.png finished processing! Image can be found in the output_images folder.
-2022-06-19 23:09:48,678:INFO:output_depth_images:2020-atlas-amethyst-016-1600x992_upscaled_depth_colored.png finished processing! Image can be found in the output_images folder.
-2022-06-19 23:09:49,477:INFO:output_depth_images:2020-atlas-amethyst-016-1600x992_upscaled_depth.png finished processing! Image can be found in the output_images folder.
-2022-06-19 23:09:50,130:INFO:output_depth_images:deken_ispahan_op_een_bed_1600x1600.png finished processing! Image can be found in the output_images folder.
-2022-06-19 23:09:50,230:INFO:output_depth_images:deken_ispahan_op_een_bed_1600x1600_depth_colored.png finished processing! Image can be found in the output_images folder.
-2022-06-19 23:09:50,265:INFO:output_depth_images:deken_ispahan_op_een_bed_1600x1600_depth.png finished processing! Image can be found in the output_images folder.
-2022-06-19 23:09:54,249:INFO:output_depth_images:deken_ispahan_op_een_bed_1600x1600_upscaled_depth_colored.png finished processing! Image can be found in the output_images folder.
-2022-06-19 23:09:55,502:INFO:output_depth_images:deken_ispahan_op_een_bed_1600x1600_upscaled_depth.png finished processing! Image can be found in the output_images folder.
-2022-06-19 23:09:55,687:INFO:output_depth_images:DSCF3790-992x992.png finished processing! Image can be found in the output_images folder.
-2022-06-19 23:09:55,726:INFO:output_depth_images:DSCF3790-992x992_depth_colored.png finished processing! Image can be found in the output_images folder.
-2022-06-19 23:09:55,741:INFO:output_depth_images:DSCF3790-992x992_depth.png finished processing! Image can be found in the output_images folder.
-2022-06-19 23:09:57,243:INFO:output_depth_images:DSCF3790-992x992_upscaled_depth_colored.png finished processing! Image can be found in the output_images folder.
-2022-06-19 23:09:57,724:INFO:output_depth_images:DSCF3790-992x992_upscaled_depth.png finished processing! Image can be found in the output_images folder.
-2022-06-19 23:09:57,775:INFO:output_depth_images:f94c2916-6a4e-4cbc-9bc1-9f0e0f4ee46c.png finished processing! Image can be found in the output_images folder.
-2022-06-19 23:09:57,784:INFO:output_depth_images:f94c2916-6a4e-4cbc-9bc1-9f0e0f4ee46c_depth_colored.png finished processing! Image can be found in the output_images folder.
-2022-06-19 23:09:57,788:INFO:output_depth_images:f94c2916-6a4e-4cbc-9bc1-9f0e0f4ee46c_depth.png finished processing! Image can be found in the output_images folder.
-2022-06-19 23:09:58,021:INFO:output_depth_images:f94c2916-6a4e-4cbc-9bc1-9f0e0f4ee46c_upscaled_depth_colored.png finished processing! Image can be found in the output_images folder.
-2022-06-19 23:09:58,105:INFO:output_depth_images:f94c2916-6a4e-4cbc-9bc1-9f0e0f4ee46c_upscaled_depth.png finished processing! Image can be found in the output_images folder.
-2022-06-19 23:09:58,309:INFO:output_depth_images:FIELDS+HOUSE+LIVING+ROOM.png finished processing! Image can be found in the output_images folder.
-2022-06-19 23:09:58,349:INFO:output_depth_images:FIELDS+HOUSE+LIVING+ROOM_depth_colored.png finished processing! Image can be found in the output_images folder.
-2022-06-19 23:09:58,364:INFO:output_depth_images:FIELDS+HOUSE+LIVING+ROOM_depth.png finished processing! Image can be found in the output_images folder.
-2022-06-19 23:09:59,429:INFO:output_depth_images:FIELDS+HOUSE+LIVING+ROOM_upscaled_depth_colored.png finished processing! Image can be found in the output_images folder.
-2022-06-19 23:09:59,775:INFO:output_depth_images:FIELDS+HOUSE+LIVING+ROOM_upscaled_depth.png finished processing! Image can be found in the output_images folder.
-2022-06-19 23:09:59,945:INFO:output_depth_images:File_033-992x992.png finished processing! Image can be found in the output_images folder.
-2022-06-19 23:09:59,987:INFO:output_depth_images:File_033-992x992_depth_colored.png finished processing! Image can be found in the output_images folder.
-2022-06-19 23:10:00,004:INFO:output_depth_images:File_033-992x992_depth.png finished processing! Image can be found in the output_images folder.
-2022-06-19 23:10:01,514:INFO:output_depth_images:File_033-992x992_upscaled_depth_colored.png finished processing! Image can be found in the output_images folder.
-2022-06-19 23:10:02,008:INFO:output_depth_images:File_033-992x992_upscaled_depth.png finished processing! Image can be found in the output_images folder.
-2022-06-19 23:10:02,132:INFO:output_depth_images:Kit_Out_My_Office's_'HD_Colour'_(blue_photo_)_office_furniture.png finished processing! Image can be found in the output_images folder.
-2022-06-19 23:10:02,152:INFO:output_depth_images:Kit_Out_My_Office's_'HD_Colour'_(blue_photo_)_office_furniture_depth_colored.png finished processing! Image can be found in the output_images folder.
-2022-06-19 23:10:02,161:INFO:output_depth_images:Kit_Out_My_Office's_'HD_Colour'_(blue_photo_)_office_furniture_depth.png finished processing! Image can be found in the output_images folder.
-2022-06-19 23:10:02,748:INFO:output_depth_images:Kit_Out_My_Office's_'HD_Colour'_(blue_photo_)_office_furniture_upscaled_depth_colored.png finished processing! Image can be found in the output_images folder.
-2022-06-19 23:10:02,947:INFO:output_depth_images:Kit_Out_My_Office's_'HD_Colour'_(blue_photo_)_office_furniture_upscaled_depth.png finished processing! Image can be found in the output_images folder.
-2022-06-19 23:10:03,154:INFO:output_depth_images:Living_Room_3D_Render_with_Interior_Design_by_NONAGON_studio.png finished processing! Image can be found in the output_images folder.
-2022-06-19 23:10:03,186:INFO:output_depth_images:Living_Room_3D_Render_with_Interior_Design_by_NONAGON_studio_depth_colored.png finished processing! Image can be found in the output_images folder.
-2022-06-19 23:10:03,201:INFO:output_depth_images:Living_Room_3D_Render_with_Interior_Design_by_NONAGON_studio_depth.png finished processing! Image can be found in the output_images folder.
-2022-06-19 23:10:04,319:INFO:output_depth_images:Living_Room_3D_Render_with_Interior_Design_by_NONAGON_studio_upscaled_depth_colored.png finished processing! Image can be found in the output_images folder.
-2022-06-19 23:10:04,692:INFO:output_depth_images:Living_Room_3D_Render_with_Interior_Design_by_NONAGON_studio_upscaled_depth.png finished processing! Image can be found in the output_images folder.
-2022-06-19 23:10:05,072:INFO:output_depth_images:palettised.png finished processing! Image can be found in the output_images folder.
-2022-06-19 23:10:05,129:INFO:output_depth_images:palettised_depth_colored.png finished processing! Image can be found in the output_images folder.
-2022-06-19 23:10:05,151:INFO:output_depth_images:palettised_depth.png finished processing! Image can be found in the output_images folder.
-2022-06-19 23:10:07,128:INFO:output_depth_images:palettised_upscaled_depth_colored.png finished processing! Image can be found in the output_images folder.
-2022-06-19 23:10:07,770:INFO:output_depth_images:palettised_upscaled_depth.png finished processing! Image can be found in the output_images folder.
-2022-06-19 23:10:08,152:INFO:output_depth_images:WhatsApp-Image-2021-01-28-at-19.17.17-2.png finished processing! Image can be found in the output_images folder.
-2022-06-19 23:10:08,222:INFO:output_depth_images:WhatsApp-Image-2021-01-28-at-19_depth_colored.png finished processing! Image can be found in the output_images folder.
-2022-06-19 23:10:08,249:INFO:output_depth_images:WhatsApp-Image-2021-01-28-at-19_depth.png finished processing! Image can be found in the output_images folder.
-2022-06-19 23:10:10,458:INFO:output_depth_images:WhatsApp-Image-2021-01-28-at-19_upscaled_depth_colored.png finished processing! Image can be found in the output_images folder.
-2022-06-19 23:10:11,208:INFO:output_depth_images:WhatsApp-Image-2021-01-28-at-19_upscaled_depth.png finished processing! Image can be found in the output_images folder.
+2022-06-21 14:42:37,584:INFO:select_pretrained_model_for_inference:1 was pressed. Loading the NYU model...
+2022-06-21 14:42:41,951:INFO:<module>:Model loaded (nyu.h5).
+2022-06-21 14:42:45,170:INFO:load_images_using_tkinter:Loaded Images: ['C:/Time Machine Code/DenseDepth/input_images/1_image.png', 'C:/Time Machine Code/DenseDepth/input_images/11_image.png', 'C:/Time Machine Code/DenseDepth/input_images/119_image.png', 'C:/Time Machine Code/DenseDepth/input_images/140_image.png', 'C:/Time Machine Code/DenseDepth/input_images/267_image.png', 'C:/Time Machine Code/DenseDepth/input_images/308_image.png', 'C:/Time Machine Code/DenseDepth/input_images/312_image.png', 'C:/Time Machine Code/DenseDepth/input_images/358_image.png', 'C:/Time Machine Code/DenseDepth/input_images/377_image.png', 'C:/Time Machine Code/DenseDepth/input_images/470_image.png', 'C:/Time Machine Code/DenseDepth/input_images/499_image.png', 'C:/Time Machine Code/DenseDepth/input_images/626_image.png', 'C:/Time Machine Code/DenseDepth/input_images/762-7627685_spotlight-living-room-stock.png', 'C:/Time Machine Code/DenseDepth/input_images/2020-atlas-amethyst-016-1600x992.png', 'C:/Time Machine Code/DenseDepth/input_images/deken_ispahan_op_een_bed_1600x1600.png', 'C:/Time Machine Code/DenseDepth/input_images/DSCF3790-992x992.png', 'C:/Time Machine Code/DenseDepth/input_images/f94c2916-6a4e-4cbc-9bc1-9f0e0f4ee46c.png', 'C:/Time Machine Code/DenseDepth/input_images/FIELDS+HOUSE+LIVING+ROOM.png', 'C:/Time Machine Code/DenseDepth/input_images/File_033-992x992.png', "C:/Time Machine Code/DenseDepth/input_images/Kit_Out_My_Office's_'HD_Colour'_(blue_photo_)_office_furniture.png", 'C:/Time Machine Code/DenseDepth/input_images/Living_Room_3D_Render_with_Interior_Design_by_NONAGON_studio.png', 'C:/Time Machine Code/DenseDepth/input_images/palettised.png', 'C:/Time Machine Code/DenseDepth/input_images/WhatsApp-Image-2021-01-28-at-19.17.17-2.png']
+2022-06-21 14:42:46,419:INFO:resize_input_image:762-7627685_spotlight-living-room-stock.png has been upscaled from (586, 820) to (608, 832).The encoder architecture expects the image dimensions to be divisible by 32.
+2022-06-21 14:42:47,800:INFO:convert_to_rgb_format:f94c2916-6a4e-4cbc-9bc1-9f0e0f4ee46c.png is not in RGB format. Converting to RGB format...
+2022-06-21 14:42:47,830:INFO:resize_input_image:f94c2916-6a4e-4cbc-9bc1-9f0e0f4ee46c.png has been upscaled from (276, 491) to (288, 512).The encoder architecture expects the image dimensions to be divisible by 32.
+2022-06-21 14:42:48,040:INFO:resize_input_image:FIELDS+HOUSE+LIVING+ROOM.png has been upscaled from (664, 1000) to (672, 1024).The encoder architecture expects the image dimensions to be divisible by 32.
+2022-06-21 14:42:48,431:INFO:resize_input_image:Kit_Out_My_Office's_'HD_Colour'_(blue_photo_)_office_furniture.png has been upscaled from (473, 786) to (480, 800).The encoder architecture expects the image dimensions to be divisible by 32.
+2022-06-21 14:42:48,619:INFO:resize_input_image:Living_Room_3D_Render_with_Interior_Design_by_NONAGON_studio.png has been upscaled from (695, 1027) to (704, 1056).The encoder architecture expects the image dimensions to be divisible by 32.
+2022-06-21 14:42:48,711:INFO:convert_to_rgb_format:palettised.png is not in RGB format. Converting to RGB format...
+2022-06-21 14:42:48,939:INFO:resize_input_image:palettised.png has been upscaled from (1228, 1050) to (1248, 1056).The encoder architecture expects the image dimensions to be divisible by 32.
+2022-06-21 14:42:49,319:INFO:resize_input_image:WhatsApp-Image-2021-01-28-at-19.17.17-2.png has been upscaled from (900, 1600) to (928, 1600).The encoder architecture expects the image dimensions to be divisible by 32.
+2022-06-21 14:42:49,331:INFO:predict:Currently predicting 1_image.png ...
+2022-06-21 14:42:52,940:INFO:predict:Currently predicting 11_image.png ...
+2022-06-21 14:42:54,261:INFO:predict:Currently predicting 119_image.png ...
+2022-06-21 14:42:55,539:INFO:predict:Currently predicting 140_image.png ...
+2022-06-21 14:42:56,721:INFO:predict:Currently predicting 267_image.png ...
+2022-06-21 14:42:57,909:INFO:predict:Currently predicting 308_image.png ...
+2022-06-21 14:42:59,114:INFO:predict:Currently predicting 312_image.png ...
+2022-06-21 14:43:00,322:INFO:predict:Currently predicting 358_image.png ...
+2022-06-21 14:43:01,505:INFO:predict:Currently predicting 377_image.png ...
+2022-06-21 14:43:02,697:INFO:predict:Currently predicting 470_image.png ...
+2022-06-21 14:43:03,893:INFO:predict:Currently predicting 499_image.png ...
+2022-06-21 14:43:05,090:INFO:predict:Currently predicting 626_image.png ...
+2022-06-21 14:43:06,311:INFO:predict:Currently predicting 762-7627685_spotlight-living-room-stock.png ...
+2022-06-21 14:43:10,437:INFO:predict:Currently predicting 2020-atlas-amethyst-016-1600x992.png ...
+2022-06-21 14:43:15,742:INFO:predict:Currently predicting deken_ispahan_op_een_bed_1600x1600.png ...
+2022-06-21 14:43:23,592:INFO:predict:Currently predicting DSCF3790-992x992.png ...
+2022-06-21 14:43:26,691:INFO:predict:Currently predicting f94c2916-6a4e-4cbc-9bc1-9f0e0f4ee46c.png ...
+2022-06-21 14:43:27,400:INFO:predict:Currently predicting FIELDS+HOUSE+LIVING+ROOM.png ...
+2022-06-21 14:43:29,809:INFO:predict:Currently predicting File_033-992x992.png ...
+2022-06-21 14:43:32,787:INFO:predict:Currently predicting Kit_Out_My_Office's_'HD_Colour'_(blue_photo_)_office_furniture.png ...
+2022-06-21 14:43:34,141:INFO:predict:Currently predicting Living_Room_3D_Render_with_Interior_Design_by_NONAGON_studio.png ...
+2022-06-21 14:43:36,505:INFO:predict:Currently predicting palettised.png ...
+2022-06-21 14:43:40,239:INFO:predict:Currently predicting WhatsApp-Image-2021-01-28-at-19.17.17-2.png ...
+2022-06-21 14:43:44,541:INFO:output_depth_images:1_image.png finished processing! Image can be found in the output_images folder.
+2022-06-21 14:43:44,561:INFO:output_depth_images:1_image_depth_colored.png finished processing! Image can be found in the output_images folder.
+2022-06-21 14:43:44,561:INFO:output_depth_images:1_image_depth.png finished processing! Image can be found in the output_images folder.
+2022-06-21 14:43:45,105:INFO:output_depth_images:1_image_upscaled_depth_colored.png finished processing! Image can be found in the output_images folder.
+2022-06-21 14:43:45,261:INFO:output_depth_images:1_image_upscaled_depth.png finished processing! Image can be found in the output_images folder.
+2022-06-21 14:43:45,378:INFO:output_depth_images:11_image.png finished processing! Image can be found in the output_images folder.
+2022-06-21 14:43:45,395:INFO:output_depth_images:11_image_depth_colored.png finished processing! Image can be found in the output_images folder.
+2022-06-21 14:43:45,403:INFO:output_depth_images:11_image_depth.png finished processing! Image can be found in the output_images folder.
+2022-06-21 14:43:45,890:INFO:output_depth_images:11_image_upscaled_depth_colored.png finished processing! Image can be found in the output_images folder.
+2022-06-21 14:43:46,059:INFO:output_depth_images:11_image_upscaled_depth.png finished processing! Image can be found in the output_images folder.
+2022-06-21 14:43:46,181:INFO:output_depth_images:119_image.png finished processing! Image can be found in the output_images folder.
+2022-06-21 14:43:46,199:INFO:output_depth_images:119_image_depth_colored.png finished processing! Image can be found in the output_images folder.
+2022-06-21 14:43:46,201:INFO:output_depth_images:119_image_depth.png finished processing! Image can be found in the output_images folder.
+2022-06-21 14:43:46,675:INFO:output_depth_images:119_image_upscaled_depth_colored.png finished processing! Image can be found in the output_images folder.
+2022-06-21 14:43:46,840:INFO:output_depth_images:119_image_upscaled_depth.png finished processing! Image can be found in the output_images folder.
+2022-06-21 14:43:46,962:INFO:output_depth_images:140_image.png finished processing! Image can be found in the output_images folder.
+2022-06-21 14:43:46,982:INFO:output_depth_images:140_image_depth_colored.png finished processing! Image can be found in the output_images folder.
+2022-06-21 14:43:46,988:INFO:output_depth_images:140_image_depth.png finished processing! Image can be found in the output_images folder.
+2022-06-21 14:43:47,475:INFO:output_depth_images:140_image_upscaled_depth_colored.png finished processing! Image can be found in the output_images folder.
+2022-06-21 14:43:47,630:INFO:output_depth_images:140_image_upscaled_depth.png finished processing! Image can be found in the output_images folder.
+2022-06-21 14:43:47,719:INFO:output_depth_images:267_image.png finished processing! Image can be found in the output_images folder.
+2022-06-21 14:43:47,730:INFO:output_depth_images:267_image_depth_colored.png finished processing! Image can be found in the output_images folder.
+2022-06-21 14:43:47,741:INFO:output_depth_images:267_image_depth.png finished processing! Image can be found in the output_images folder.
+2022-06-21 14:43:48,219:INFO:output_depth_images:267_image_upscaled_depth_colored.png finished processing! Image can be found in the output_images folder.
+2022-06-21 14:43:48,378:INFO:output_depth_images:267_image_upscaled_depth.png finished processing! Image can be found in the output_images folder.
+2022-06-21 14:43:48,504:INFO:output_depth_images:308_image.png finished processing! Image can be found in the output_images folder.
+2022-06-21 14:43:48,522:INFO:output_depth_images:308_image_depth_colored.png finished processing! Image can be found in the output_images folder.
+2022-06-21 14:43:48,531:INFO:output_depth_images:308_image_depth.png finished processing! Image can be found in the output_images folder.
+2022-06-21 14:43:49,009:INFO:output_depth_images:308_image_upscaled_depth_colored.png finished processing! Image can be found in the output_images folder.
+2022-06-21 14:43:49,165:INFO:output_depth_images:308_image_upscaled_depth.png finished processing! Image can be found in the output_images folder.
+2022-06-21 14:43:49,302:INFO:output_depth_images:312_image.png finished processing! Image can be found in the output_images folder.
+2022-06-21 14:43:49,319:INFO:output_depth_images:312_image_depth_colored.png finished processing! Image can be found in the output_images folder.
+2022-06-21 14:43:49,335:INFO:output_depth_images:312_image_depth.png finished processing! Image can be found in the output_images folder.
+2022-06-21 14:43:49,822:INFO:output_depth_images:312_image_upscaled_depth_colored.png finished processing! Image can be found in the output_images folder.
+2022-06-21 14:43:49,981:INFO:output_depth_images:312_image_upscaled_depth.png finished processing! Image can be found in the output_images folder.
+2022-06-21 14:43:50,090:INFO:output_depth_images:358_image.png finished processing! Image can be found in the output_images folder.
+2022-06-21 14:43:50,118:INFO:output_depth_images:358_image_depth_colored.png finished processing! Image can be found in the output_images folder.
+2022-06-21 14:43:50,127:INFO:output_depth_images:358_image_depth.png finished processing! Image can be found in the output_images folder.
+2022-06-21 14:43:50,643:INFO:output_depth_images:358_image_upscaled_depth_colored.png finished processing! Image can be found in the output_images folder.
+2022-06-21 14:43:50,804:INFO:output_depth_images:358_image_upscaled_depth.png finished processing! Image can be found in the output_images folder.
+2022-06-21 14:43:50,938:INFO:output_depth_images:377_image.png finished processing! Image can be found in the output_images folder.
+2022-06-21 14:43:50,956:INFO:output_depth_images:377_image_depth_colored.png finished processing! Image can be found in the output_images folder.
+2022-06-21 14:43:50,964:INFO:output_depth_images:377_image_depth.png finished processing! Image can be found in the output_images folder.
+2022-06-21 14:43:51,440:INFO:output_depth_images:377_image_upscaled_depth_colored.png finished processing! Image can be found in the output_images folder.
+2022-06-21 14:43:51,602:INFO:output_depth_images:377_image_upscaled_depth.png finished processing! Image can be found in the output_images folder.
+2022-06-21 14:43:51,720:INFO:output_depth_images:470_image.png finished processing! Image can be found in the output_images folder.
+2022-06-21 14:43:51,739:INFO:output_depth_images:470_image_depth_colored.png finished processing! Image can be found in the output_images folder.
+2022-06-21 14:43:51,744:INFO:output_depth_images:470_image_depth.png finished processing! Image can be found in the output_images folder.
+2022-06-21 14:43:52,239:INFO:output_depth_images:470_image_upscaled_depth_colored.png finished processing! Image can be found in the output_images folder.
+2022-06-21 14:43:52,391:INFO:output_depth_images:470_image_upscaled_depth.png finished processing! Image can be found in the output_images folder.
+2022-06-21 14:43:52,499:INFO:output_depth_images:499_image.png finished processing! Image can be found in the output_images folder.
+2022-06-21 14:43:52,514:INFO:output_depth_images:499_image_depth_colored.png finished processing! Image can be found in the output_images folder.
+2022-06-21 14:43:52,521:INFO:output_depth_images:499_image_depth.png finished processing! Image can be found in the output_images folder.
+2022-06-21 14:43:52,988:INFO:output_depth_images:499_image_upscaled_depth_colored.png finished processing! Image can be found in the output_images folder.
+2022-06-21 14:43:53,151:INFO:output_depth_images:499_image_upscaled_depth.png finished processing! Image can be found in the output_images folder.
+2022-06-21 14:43:53,259:INFO:output_depth_images:626_image.png finished processing! Image can be found in the output_images folder.
+2022-06-21 14:43:53,277:INFO:output_depth_images:626_image_depth_colored.png finished processing! Image can be found in the output_images folder.
+2022-06-21 14:43:53,284:INFO:output_depth_images:626_image_depth.png finished processing! Image can be found in the output_images folder.
+2022-06-21 14:43:53,759:INFO:output_depth_images:626_image_upscaled_depth_colored.png finished processing! Image can be found in the output_images folder.
+2022-06-21 14:43:53,918:INFO:output_depth_images:626_image_upscaled_depth.png finished processing! Image can be found in the output_images folder.
+2022-06-21 14:43:54,074:INFO:output_depth_images:762-7627685_spotlight-living-room-stock.png finished processing! Image can be found in the output_images folder.
+2022-06-21 14:43:54,098:INFO:output_depth_images:762-7627685_spotlight-living-room-stock_depth_colored.png finished processing! Image can be found in the output_images folder.
+2022-06-21 14:43:54,108:INFO:output_depth_images:762-7627685_spotlight-living-room-stock_depth.png finished processing! Image can be found in the output_images folder.
+2022-06-21 14:43:54,869:INFO:output_depth_images:762-7627685_spotlight-living-room-stock_upscaled_depth_colored.png finished processing! Image can be found in the output_images folder.
+2022-06-21 14:43:55,121:INFO:output_depth_images:762-7627685_spotlight-living-room-stock_upscaled_depth.png finished processing! Image can be found in the output_images folder.
+2022-06-21 14:43:55,433:INFO:output_depth_images:2020-atlas-amethyst-016-1600x992.png finished processing! Image can be found in the output_images folder.
+2022-06-21 14:43:55,492:INFO:output_depth_images:2020-atlas-amethyst-016-1600x992_depth_colored.png finished processing! Image can be found in the output_images folder.
+2022-06-21 14:43:55,525:INFO:output_depth_images:2020-atlas-amethyst-016-1600x992_depth.png finished processing! Image can be found in the output_images folder.
+2022-06-21 14:43:57,900:INFO:output_depth_images:2020-atlas-amethyst-016-1600x992_upscaled_depth_colored.png finished processing! Image can be found in the output_images folder.
+2022-06-21 14:43:58,711:INFO:output_depth_images:2020-atlas-amethyst-016-1600x992_upscaled_depth.png finished processing! Image can be found in the output_images folder.
+2022-06-21 14:43:59,393:INFO:output_depth_images:deken_ispahan_op_een_bed_1600x1600.png finished processing! Image can be found in the output_images folder.
+2022-06-21 14:43:59,494:INFO:output_depth_images:deken_ispahan_op_een_bed_1600x1600_depth_colored.png finished processing! Image can be found in the output_images folder.
+2022-06-21 14:43:59,532:INFO:output_depth_images:deken_ispahan_op_een_bed_1600x1600_depth.png finished processing! Image can be found in the output_images folder.
+2022-06-21 14:44:03,421:INFO:output_depth_images:deken_ispahan_op_een_bed_1600x1600_upscaled_depth_colored.png finished processing! Image can be found in the output_images folder.
+2022-06-21 14:44:04,701:INFO:output_depth_images:deken_ispahan_op_een_bed_1600x1600_upscaled_depth.png finished processing! Image can be found in the output_images folder.
+2022-06-21 14:44:04,891:INFO:output_depth_images:DSCF3790-992x992.png finished processing! Image can be found in the output_images folder.
+2022-06-21 14:44:04,930:INFO:output_depth_images:DSCF3790-992x992_depth_colored.png finished processing! Image can be found in the output_images folder.
+2022-06-21 14:44:04,950:INFO:output_depth_images:DSCF3790-992x992_depth.png finished processing! Image can be found in the output_images folder.
+2022-06-21 14:44:06,414:INFO:output_depth_images:DSCF3790-992x992_upscaled_depth_colored.png finished processing! Image can be found in the output_images folder.
+2022-06-21 14:44:06,910:INFO:output_depth_images:DSCF3790-992x992_upscaled_depth.png finished processing! Image can be found in the output_images folder.
+2022-06-21 14:44:06,970:INFO:output_depth_images:f94c2916-6a4e-4cbc-9bc1-9f0e0f4ee46c.png finished processing! Image can be found in the output_images folder.
+2022-06-21 14:44:06,981:INFO:output_depth_images:f94c2916-6a4e-4cbc-9bc1-9f0e0f4ee46c_depth_colored.png finished processing! Image can be found in the output_images folder.
+2022-06-21 14:44:06,981:INFO:output_depth_images:f94c2916-6a4e-4cbc-9bc1-9f0e0f4ee46c_depth.png finished processing! Image can be found in the output_images folder.
+2022-06-21 14:44:07,227:INFO:output_depth_images:f94c2916-6a4e-4cbc-9bc1-9f0e0f4ee46c_upscaled_depth_colored.png finished processing! Image can be found in the output_images folder.
+2022-06-21 14:44:07,305:INFO:output_depth_images:f94c2916-6a4e-4cbc-9bc1-9f0e0f4ee46c_upscaled_depth.png finished processing! Image can be found in the output_images folder.
+2022-06-21 14:44:07,480:INFO:output_depth_images:FIELDS+HOUSE+LIVING+ROOM.png finished processing! Image can be found in the output_images folder.
+2022-06-21 14:44:07,524:INFO:output_depth_images:FIELDS+HOUSE+LIVING+ROOM_depth_colored.png finished processing! Image can be found in the output_images folder.
+2022-06-21 14:44:07,542:INFO:output_depth_images:FIELDS+HOUSE+LIVING+ROOM_depth.png finished processing! Image can be found in the output_images folder.
+2022-06-21 14:44:08,622:INFO:output_depth_images:FIELDS+HOUSE+LIVING+ROOM_upscaled_depth_colored.png finished processing! Image can be found in the output_images folder.
+2022-06-21 14:44:08,971:INFO:output_depth_images:FIELDS+HOUSE+LIVING+ROOM_upscaled_depth.png finished processing! Image can be found in the output_images folder.
+2022-06-21 14:44:09,143:INFO:output_depth_images:File_033-992x992.png finished processing! Image can be found in the output_images folder.
+2022-06-21 14:44:09,199:INFO:output_depth_images:File_033-992x992_depth_colored.png finished processing! Image can be found in the output_images folder.
+2022-06-21 14:44:09,214:INFO:output_depth_images:File_033-992x992_depth.png finished processing! Image can be found in the output_images folder.
+2022-06-21 14:44:10,702:INFO:output_depth_images:File_033-992x992_upscaled_depth_colored.png finished processing! Image can be found in the output_images folder.
+2022-06-21 14:44:11,184:INFO:output_depth_images:File_033-992x992_upscaled_depth.png finished processing! Image can be found in the output_images folder.
+2022-06-21 14:44:11,306:INFO:output_depth_images:Kit_Out_My_Office's_'HD_Colour'_(blue_photo_)_office_furniture.png finished processing! Image can be found in the output_images folder.
+2022-06-21 14:44:11,328:INFO:output_depth_images:Kit_Out_My_Office's_'HD_Colour'_(blue_photo_)_office_furniture_depth_colored.png finished processing! Image can be found in the output_images folder.
+2022-06-21 14:44:11,338:INFO:output_depth_images:Kit_Out_My_Office's_'HD_Colour'_(blue_photo_)_office_furniture_depth.png finished processing! Image can be found in the output_images folder.
+2022-06-21 14:44:11,932:INFO:output_depth_images:Kit_Out_My_Office's_'HD_Colour'_(blue_photo_)_office_furniture_upscaled_depth_colored.png finished processing! Image can be found in the output_images folder.
+2022-06-21 14:44:12,140:INFO:output_depth_images:Kit_Out_My_Office's_'HD_Colour'_(blue_photo_)_office_furniture_upscaled_depth.png finished processing! Image can be found in the output_images folder.
+2022-06-21 14:44:12,359:INFO:output_depth_images:Living_Room_3D_Render_with_Interior_Design_by_NONAGON_studio.png finished processing! Image can be found in the output_images folder.
+2022-06-21 14:44:12,389:INFO:output_depth_images:Living_Room_3D_Render_with_Interior_Design_by_NONAGON_studio_depth_colored.png finished processing! Image can be found in the output_images folder.
+2022-06-21 14:44:12,414:INFO:output_depth_images:Living_Room_3D_Render_with_Interior_Design_by_NONAGON_studio_depth.png finished processing! Image can be found in the output_images folder.
+2022-06-21 14:44:13,564:INFO:output_depth_images:Living_Room_3D_Render_with_Interior_Design_by_NONAGON_studio_upscaled_depth_colored.png finished processing! Image can be found in the output_images folder.
+2022-06-21 14:44:13,940:INFO:output_depth_images:Living_Room_3D_Render_with_Interior_Design_by_NONAGON_studio_upscaled_depth.png finished processing! Image can be found in the output_images folder.
+2022-06-21 14:44:14,335:INFO:output_depth_images:palettised.png finished processing! Image can be found in the output_images folder.
+2022-06-21 14:44:14,392:INFO:output_depth_images:palettised_depth_colored.png finished processing! Image can be found in the output_images folder.
+2022-06-21 14:44:14,418:INFO:output_depth_images:palettised_depth.png finished processing! Image can be found in the output_images folder.
+2022-06-21 14:44:16,384:INFO:output_depth_images:palettised_upscaled_depth_colored.png finished processing! Image can be found in the output_images folder.
+2022-06-21 14:44:17,032:INFO:output_depth_images:palettised_upscaled_depth.png finished processing! Image can be found in the output_images folder.
+2022-06-21 14:44:17,429:INFO:output_depth_images:WhatsApp-Image-2021-01-28-at-19.17.17-2.png finished processing! Image can be found in the output_images folder.
+2022-06-21 14:44:17,494:INFO:output_depth_images:WhatsApp-Image-2021-01-28-at-19_depth_colored.png finished processing! Image can be found in the output_images folder.
+2022-06-21 14:44:17,537:INFO:output_depth_images:WhatsApp-Image-2021-01-28-at-19_depth.png finished processing! Image can be found in the output_images folder.
+2022-06-21 14:44:19,749:INFO:output_depth_images:WhatsApp-Image-2021-01-28-at-19_upscaled_depth_colored.png finished processing! Image can be found in the output_images folder.
+2022-06-21 14:44:20,501:INFO:output_depth_images:WhatsApp-Image-2021-01-28-at-19_upscaled_depth.png finished processing! Image can be found in the output_images folder.

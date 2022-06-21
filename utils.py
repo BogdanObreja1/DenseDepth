@@ -15,7 +15,7 @@ def initialize_model_logger():
     The method below sets and initiates the Depth Model logger.
     The model logger tasks are:
     1. To print on the screen different message types (DEBUG, INFO, ERROR, CRITICAL).
-    2. To log the messages in the depth_model.log.
+    2. Write the messages in the depth_model.log which can be found in logger folder.
     (Created Function)
     """
 
@@ -64,7 +64,7 @@ def clear_keyboard_inputs():
 
 def select_pretrained_model_for_inference(logger_model):
     """"
-    UI that allows the user to select the pre-trained model on which to run inference.
+    Interface that allows the user to select the pre-trained model on which to run inference.
     (Created Function)
     """
     print("Select the pre-trained model for inference by pressing the keyboard corresponding number (e.g press 1 for NYU):")
@@ -113,14 +113,15 @@ def load_images_using_tkinter(logger_model):
     logger_model.info("Loaded Images: " + str(images)[:])
     return images
 
+
 def load_images(image_files, logger_model):
     """"
-    Load the images.
     (Modified function)
     -> Added the option to load images of different sizes (before all input images had to be the same size).
     -> The encoder architecture expects the image dimensions to be divisible by 32. Hence for the images where this
     is not the case, we upscale the width/height to the closest number divisible by 32.
-    -> Palettised colored images can also be used.
+    -> Makes sure to convert non-RGB format images to the RGB standard format (3 channels) - Requirement for the model.
+      (Palettised colored images can also be used)
     -> Before you were only able to input images with the same width and height. Now it doesn't matter anymore.
     """
     loaded_images = []
@@ -130,20 +131,29 @@ def load_images(image_files, logger_model):
         parsed_file_name = file.split("/")
         input_image_name = parsed_file_name[-1]
         loaded_images_name.append(input_image_name)
-        # Had a case where a coloured image was "palettised" (2 channels only) - palettised.png in the input_images.
-        # Hence in order to solve this issue, we first convert the image to "RGB".
-        if x.ndim != 3 or x.shape[-1] != 3:
-            x = np.clip(np.asarray(Image.open(file).convert('RGB'))/255, 0, 1)
-            logger_model.info(input_image_name + " is not in RGB format. Converting to RGB format...")
-        else:
-            x = np.clip(np.asarray(Image.open(file), dtype=float)/255, 0, 1)
-
+        x = convert_to_rgb_format(x,file, logger_model, input_image_name)
         x = resize_input_image(x, logger_model, input_image_name)
         loaded_images.append(np.stack(x))
 
     #return np.stack(loaded_images, axis=0)
     return loaded_images, loaded_images_name
 
+
+def convert_to_rgb_format(image,image_path, logger_model, input_image_name):
+    """
+    Makes sure to convert non-RGB format images to the RGB standard format (3 channels) - Requirement for the model.
+      (Palettised colored images can also be used)
+    (Created function)
+    """
+
+    # Had a case where a coloured image was "palettised" (2 channels only) - palettised.png in the input_images.
+    # Hence in order to solve this issue, we first convert the image to "RGB".
+    if image.ndim != 3 or image.shape[-1] != 3:
+        image = np.clip(np.asarray(Image.open(image_path).convert('RGB')) / 255, 0, 1)
+        logger_model.info(input_image_name + " is not in RGB format. Converting to RGB format...")
+    else:
+        image = np.clip(np.asarray(Image.open(image_path), dtype=float) / 255, 0, 1)
+    return image
 
 def resize_input_image(image, logger_model, input_image_name):
     """"
