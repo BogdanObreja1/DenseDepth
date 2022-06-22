@@ -260,8 +260,10 @@ def output_depth_images(outputs, logger_model, inputs=None, loaded_input_images_
 
         # Output the "black/white" Depth Image(width, height are the same as the input image)
         upscaled_depth_image_shape = (2 * outputs[index][0].shape[0], 2 * outputs[index][0].shape[1])
-        upscaled_colored_depth_image = np.uint8(to_multichannel(resize(outputs[index][0], upscaled_depth_image_shape, order=3, mode='reflect', anti_aliasing=True)) * 255)
-        im5 = Image.fromarray(upscaled_colored_depth_image)
+        upscaled_depth_image = np.uint8(to_multichannel(resize(outputs[index][0], upscaled_depth_image_shape, order=3, mode='reflect', anti_aliasing=True)) * 255)
+        upscaled_depth_image = upscaled_depth_image[:,:,0]
+        #im5 = Image.fromarray(upscaled_depth_image).convert('L')
+        im5 = Image.fromarray(upscaled_depth_image)
         upscaled_depth_image_name = name_pic + "_upscaled_depth.png"
         im5.save(output_dir + "\\" + upscaled_depth_image_name)
         logger_model.info(upscaled_depth_image_name + " finished processing! Image can be found in the output_images folder.")
