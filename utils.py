@@ -8,6 +8,7 @@ import time
 from keyboard_bindings import keyboard_numbers_binding as keyboard_binding
 from tkinter import Tk, Label, Button
 from tkinter import filedialog
+import copy
 
 
 def initialize_model_logger():
@@ -113,36 +114,64 @@ def load_images_using_tkinter(logger_model):
     logger_model.info("Loaded Images: " + str(images)[:])
     return images
 
+def load_demo_images(logger_model, model_name):
+    """
+    (Created Function)
+    Load the demo images.
+    """
 
-def load_images(image_files, logger_model):
+    images = []
+    dir = os.path.dirname(__file__)
+    # Output directory for images
+    input_dir = os.path.join(dir, 'input_images', 'demo_images')
+    if model_name == "nyu.h5":
+        image_path1 = input_dir + "//people.png"
+        image_path2 = input_dir + "//1_image.png"
+
+    elif model_name == "kitti.h5":
+        image_path1 = input_dir +"//000296.png"
+        image_path2 = input_dir + "//000290.png"
+
+    images = [image_path1, image_path2]
+
+    logger_model.info("Loade Image: " + str(images)[:])
+
+    return images
+
+def load_images(image_files, logger_model, model_name):
     """"
-    (Modified function)
+    (Created function)
     -> Added the option to load images of different sizes (before all input images had to be the same size).
-    -> The encoder architecture expects the image dimensions to be divisible by 32. Hence for the images where this
-    is not the case, we upscale the width/height to the closest number divisible by 32.
     -> Makes sure to convert non-RGB format images to the RGB standard format (3 channels) - Requirement for the model.
       (Palettised colored images can also be used)
-    -> Before you were only able to input images with the same width and height. Now it doesn't matter anymore.
+    -> Resize the input image(s) to the image sizes used during training/testing (nyu - (640, 480), kitti - (1280, 384)).
+       The resulting image(s) will be used as input for depth inference.
+    -> Also returns the input image with original size after converting to RGB format in order to be used later as input
+     for YOLO.
     """
     loaded_images = []
     loaded_images_name = []
+    org_images = []
+    inputs_shape = []
     for file in image_files:
         x = np.array(Image.open(file))
         parsed_file_name = file.split("/")
         input_image_name = parsed_file_name[-1]
         loaded_images_name.append(input_image_name)
         x = convert_to_rgb_format(x,file, logger_model, input_image_name)
-        x = resize_input_image(x, logger_model, input_image_name)
+        input_image = copy.deepcopy(x)
+        org_images.append(np.stack(input_image))
+        x, input_shape = resize_input_image(x, logger_model, input_image_name, model_name)
         loaded_images.append(np.stack(x))
+        inputs_shape.append(input_shape)
 
-    #return np.stack(loaded_images, axis=0)
-    return loaded_images, loaded_images_name
+    return loaded_images, loaded_images_name, inputs_shape, org_images
 
 
 def convert_to_rgb_format(image,image_path, logger_model, input_image_name):
     """
     Makes sure to convert non-RGB format images to the RGB standard format (3 channels) - Requirement for the model.
-      (Palettised colored images can also be used)
+    (Palettised colored images can also be used)
     (Created function)
     """
 
@@ -155,36 +184,37 @@ def convert_to_rgb_format(image,image_path, logger_model, input_image_name):
         image = np.clip(np.asarray(Image.open(image_path), dtype=float) / 255, 0, 1)
     return image
 
-def resize_input_image(image, logger_model, input_image_name):
+def resize_input_image(image, logger_model, input_image_name, pretrained_model):
     """"
-    The encoder architecture expects the image dimensions to be divisible by 32. Hence for the images where this
-    is not the case, we upscale the width/height to the closest number divisible by 32.
-    Upscaling method used: biliniar
+    Resize the input image(s) to the image sizes used during training/testing (nyu - 640, 480, kitti - 1280, 384).
+    The resulting image(s) will be used as input for depth inference.
+    The encoder architecture also expects the image dimensions to be divisible by 32.
+    Resizing method used: bicubic (to retain as many details as possible)
     (Created Function)
     """
-    width, height, channels = image.shape
-    input_shape = (width, height)
-    output_width = width
-    output_height = height
+    height , width, channels = image.shape
+    input_shape = (height, width)
     is_input_image_upscaled = 0
 
-    if width % 32 != 0:
-        output_width = width + (32 - width % 32)
+    if pretrained_model == "nyu.h5":
+        output_shape = (480, 640)
+    elif pretrained_model == 'kitti.h5':
+        output_shape = (384, 1280)
+
+    if width % output_shape[1] != 0:
+        image = resize(image, output_shape, order=3, preserve_range=True, mode='reflect', anti_aliasing=True)
         is_input_image_upscaled = 1
 
-    if height % 32 != 0:
-        output_height = height + (32 - height % 32)
+    if height % output_shape[0] != 0:
+        image = resize(image, output_shape, order=3, preserve_range=True, mode='reflect', anti_aliasing=True)
         is_input_image_upscaled = 1
-
-    output_shape = (output_width, output_height)
-
-    image = resize(image, output_shape, order=1, preserve_range=True, mode='reflect', anti_aliasing=True)
 
     if is_input_image_upscaled == 1:
-        logger_model.info(input_image_name + " has been upscaled from " + str(input_shape) + " to " + str(output_shape) +
-        ".The encoder architecture expects the image dimensions to be divisible by 32.")
+        logger_model.info(
+            input_image_name + " has been resized from " + str(input_shape) + " to " + str(output_shape) +
+            " in order to be used as input for the depth inference.")
 
-    return image
+    return image,input_shape
 
 
 def predict(model, images, logger_model, loaded_input_images_name, minDepth=10, maxDepth=1000, batch_size=1):
@@ -196,7 +226,6 @@ def predict(model, images, logger_model, loaded_input_images_name, minDepth=10, 
     output_images = []
     i = 0
     for image in images:
-
         logger_model.info("Currently predicting " + loaded_input_images_name[i] + " ...")
         if len(image.shape) < 3: image = np.stack((image,image,image), axis=2)
         if len(image.shape) < 4: image = image.reshape((1, image.shape[0], image.shape[1], image.shape[2]))
@@ -208,7 +237,7 @@ def predict(model, images, logger_model, loaded_input_images_name, minDepth=10, 
     return output_images
 
 
-def output_depth_images(outputs, logger_model, inputs=None, loaded_input_images_name = None):
+def output_depth_images(outputs, logger_model, inputs_shape, inputs=None, loaded_input_images_name = None):
     """
     (Created function)
     Output the depth images along with the input images to the output_images folder.
@@ -251,7 +280,7 @@ def output_depth_images(outputs, logger_model, inputs=None, loaded_input_images_
         logger_model.info(depth_image_name + " finished processing! Image can be found in the output_images folder.")
 
         # Output the Colored Depth Image(width, height are the same as the input image)
-        upscaled_colored_depth_image_shape = (2 * rescaled.shape[0], 2 * rescaled.shape[1])
+        upscaled_colored_depth_image_shape = inputs_shape[index]
         upscaled_colored_depth_image = np.uint8((resize(colored_depth_image, upscaled_colored_depth_image_shape, order=3, preserve_range=True, mode='reflect', anti_aliasing=True)))
         im4 = Image.fromarray(upscaled_colored_depth_image)
         upscaled_colored_depth_image_name = name_pic + "_upscaled_depth_colored.png"
@@ -259,10 +288,9 @@ def output_depth_images(outputs, logger_model, inputs=None, loaded_input_images_
         logger_model.info(upscaled_colored_depth_image_name + " finished processing! Image can be found in the output_images folder.")
 
         # Output the "black/white" Depth Image(width, height are the same as the input image)
-        upscaled_depth_image_shape = (2 * outputs[index][0].shape[0], 2 * outputs[index][0].shape[1])
+        upscaled_depth_image_shape = inputs_shape[index]
         upscaled_depth_image = np.uint8(to_multichannel(resize(outputs[index][0], upscaled_depth_image_shape, order=3, mode='reflect', anti_aliasing=True)) * 255)
         upscaled_depth_image = upscaled_depth_image[:,:,0]
-        #im5 = Image.fromarray(upscaled_depth_image).convert('L')
         im5 = Image.fromarray(upscaled_depth_image)
         upscaled_depth_image_name = name_pic + "_upscaled_depth.png"
         im5.save(output_dir + "\\" + upscaled_depth_image_name)

@@ -1,10 +1,15 @@
-2022-06-21 23:54:23,292:INFO:select_pretrained_model_for_inference:2 was pressed. Loading the KITTI model...
-2022-06-21 23:54:27,426:INFO:<module>:Model loaded (kitti.h5).
-2022-06-21 23:54:45,236:INFO:load_images_using_tkinter:Loaded Images: ['C:/Time Machine Code/DenseDepth/input_images/people.png']
-2022-06-21 23:54:45,325:INFO:resize_input_image:people.png has been upscaled from (408, 612) to (416, 640).The encoder architecture expects the image dimensions to be divisible by 32.
-2022-06-21 23:54:45,327:INFO:predict:Currently predicting people.png ...
-2022-06-21 23:54:52,115:INFO:output_depth_images:people.png finished processing! Image can be found in the output_images folder.
-2022-06-21 23:54:52,132:INFO:output_depth_images:people_depth_colored.png finished processing! Image can be found in the output_images folder.
-2022-06-21 23:54:52,138:INFO:output_depth_images:people_depth.png finished processing! Image can be found in the output_images folder.
-2022-06-21 23:54:52,621:INFO:output_depth_images:people_upscaled_depth_colored.png finished processing! Image can be found in the output_images folder.
-2022-06-21 23:54:52,760:INFO:output_depth_images:people_upscaled_depth.png finished processing! Image can be found in the output_images folder.
+2022-06-27 11:45:59,189:INFO:<module>:Model loaded (nyu.h5).
+2022-06-27 11:45:59,189:INFO:load_demo_images:Loade Image: ['C:\\Time Machine Code\\DenseDepth\\input_images\\demo_images//people.png', 'C:\\Time Machine Code\\DenseDepth\\input_images\\demo_images//1_image.png']
+2022-06-27 11:46:00,069:INFO:resize_input_image:people.png has been resized from (408, 612) to (480, 640) in order to be used as input for the depth inference.
+2022-06-27 11:46:00,115:INFO:predict:Currently predicting people.png ...
+2022-06-27 11:46:03,551:INFO:predict:Currently predicting 1_image.png ...
+2022-06-27 11:46:05,404:INFO:output_depth_images:people.png finished processing! Image can be found in the output_images folder.
+2022-06-27 11:46:05,419:INFO:output_depth_images:people_depth_colored.png finished processing! Image can be found in the output_images folder.
+2022-06-27 11:46:05,435:INFO:output_depth_images:people_depth.png finished processing! Image can be found in the output_images folder.
+2022-06-27 11:46:05,827:INFO:output_depth_images:people_upscaled_depth_colored.png finished processing! Image can be found in the output_images folder.
+2022-06-27 11:46:05,953:INFO:output_depth_images:people_upscaled_depth.png finished processing! Image can be found in the output_images folder.
+2022-06-27 11:46:06,047:INFO:output_depth_images:1_image.png finished processing! Image can be found in the output_images folder.
+2022-06-27 11:46:06,069:INFO:output_depth_images:1_image_depth_colored.png finished processing! Image can be found in the output_images folder.
+2022-06-27 11:46:06,079:INFO:output_depth_images:1_image_depth.png finished processing! Image can be found in the output_images folder.
+2022-06-27 11:46:06,550:INFO:output_depth_images:1_image_upscaled_depth_colored.png finished processing! Image can be found in the output_images folder.
+2022-06-27 11:46:06,691:INFO:output_depth_images:1_image_upscaled_depth.png finished processing! Image can be found in the output_images folder.
