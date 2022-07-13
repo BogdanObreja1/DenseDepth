@@ -1,15 +1,29 @@
-2022-06-27 11:45:59,189:INFO:<module>:Model loaded (nyu.h5).
-2022-06-27 11:45:59,189:INFO:load_demo_images:Loade Image: ['C:\\Time Machine Code\\DenseDepth\\input_images\\demo_images//people.png', 'C:\\Time Machine Code\\DenseDepth\\input_images\\demo_images//1_image.png']
-2022-06-27 11:46:00,069:INFO:resize_input_image:people.png has been resized from (408, 612) to (480, 640) in order to be used as input for the depth inference.
-2022-06-27 11:46:00,115:INFO:predict:Currently predicting people.png ...
-2022-06-27 11:46:03,551:INFO:predict:Currently predicting 1_image.png ...
-2022-06-27 11:46:05,404:INFO:output_depth_images:people.png finished processing! Image can be found in the output_images folder.
-2022-06-27 11:46:05,419:INFO:output_depth_images:people_depth_colored.png finished processing! Image can be found in the output_images folder.
-2022-06-27 11:46:05,435:INFO:output_depth_images:people_depth.png finished processing! Image can be found in the output_images folder.
-2022-06-27 11:46:05,827:INFO:output_depth_images:people_upscaled_depth_colored.png finished processing! Image can be found in the output_images folder.
-2022-06-27 11:46:05,953:INFO:output_depth_images:people_upscaled_depth.png finished processing! Image can be found in the output_images folder.
-2022-06-27 11:46:06,047:INFO:output_depth_images:1_image.png finished processing! Image can be found in the output_images folder.
-2022-06-27 11:46:06,069:INFO:output_depth_images:1_image_depth_colored.png finished processing! Image can be found in the output_images folder.
-2022-06-27 11:46:06,079:INFO:output_depth_images:1_image_depth.png finished processing! Image can be found in the output_images folder.
-2022-06-27 11:46:06,550:INFO:output_depth_images:1_image_upscaled_depth_colored.png finished processing! Image can be found in the output_images folder.
-2022-06-27 11:46:06,691:INFO:output_depth_images:1_image_upscaled_depth.png finished processing! Image can be found in the output_images folder.
+2022-07-01 13:21:32,361:INFO:<module>:Model loaded (nyu.h5).
+2022-07-01 13:21:47,615:INFO:load_images_using_tkinter:Loaded Images: ['C:/Time Machine Code/DenseDepth/input_images/11_image.png', 'C:/Time Machine Code/DenseDepth/input_images/358_image.png', 'C:/Time Machine Code/DenseDepth/input_images/f94c2916-6a4e-4cbc-9bc1-9f0e0f4ee46c.png', 'C:/Time Machine Code/DenseDepth/input_images/pih_1.png']
+2022-07-01 13:21:47,812:INFO:convert_to_rgb_format:f94c2916-6a4e-4cbc-9bc1-9f0e0f4ee46c.png is not in RGB format. Converting to RGB format...
+2022-07-01 13:21:49,424:INFO:resize_input_image:f94c2916-6a4e-4cbc-9bc1-9f0e0f4ee46c.png has been resized from (276, 491) to (480, 640) in order to be used as input for the depth inference.
+2022-07-01 13:21:51,192:INFO:resize_input_image:pih_1.png has been resized from (549, 976) to (480, 640) in order to be used as input for the depth inference.
+2022-07-01 13:21:51,197:INFO:predict:Currently predicting 11_image.png ...
+2022-07-01 13:21:57,268:INFO:predict:Currently predicting 358_image.png ...
+2022-07-01 13:21:59,251:INFO:predict:Currently predicting f94c2916-6a4e-4cbc-9bc1-9f0e0f4ee46c.png ...
+2022-07-01 13:22:01,207:INFO:predict:Currently predicting pih_1.png ...
+2022-07-01 13:22:04,142:INFO:output_depth_images:11_image.png finished processing! Image can be found in the output_images folder.
+2022-07-01 13:22:04,160:INFO:output_depth_images:11_image_depth_colored.png finished processing! Image can be found in the output_images folder.
+2022-07-01 13:22:04,169:INFO:output_depth_images:11_image_depth.png finished processing! Image can be found in the output_images folder.
+2022-07-01 13:22:04,697:INFO:output_depth_images:11_image_upscaled_depth_colored.png finished processing! Image can be found in the output_images folder.
+2022-07-01 13:22:04,864:INFO:output_depth_images:11_image_upscaled_depth.png finished processing! Image can be found in the output_images folder.
+2022-07-01 13:22:04,979:INFO:output_depth_images:358_image.png finished processing! Image can be found in the output_images folder.
+2022-07-01 13:22:04,999:INFO:output_depth_images:358_image_depth_colored.png finished processing! Image can be found in the output_images folder.
+2022-07-01 13:22:05,008:INFO:output_depth_images:358_image_depth.png finished processing! Image can be found in the output_images folder.
+2022-07-01 13:22:05,677:INFO:output_depth_images:358_image_upscaled_depth_colored.png finished processing! Image can be found in the output_images folder.
+2022-07-01 13:22:05,961:INFO:output_depth_images:358_image_upscaled_depth.png finished processing! Image can be found in the output_images folder.
+2022-07-01 13:22:06,016:INFO:output_depth_images:f94c2916-6a4e-4cbc-9bc1-9f0e0f4ee46c.png finished processing! Image can be found in the output_images folder.
+2022-07-01 13:22:06,037:INFO:output_depth_images:f94c2916-6a4e-4cbc-9bc1-9f0e0f4ee46c_depth_colored.png finished processing! Image can be found in the output_images folder.
+2022-07-01 13:22:06,045:INFO:output_depth_images:f94c2916-6a4e-4cbc-9bc1-9f0e0f4ee46c_depth.png finished processing! Image can be found in the output_images folder.
+2022-07-01 13:22:06,317:INFO:output_depth_images:f94c2916-6a4e-4cbc-9bc1-9f0e0f4ee46c_upscaled_depth_colored.png finished processing! Image can be found in the output_images folder.
+2022-07-01 13:22:06,397:INFO:output_depth_images:f94c2916-6a4e-4cbc-9bc1-9f0e0f4ee46c_upscaled_depth.png finished processing! Image can be found in the output_images folder.
+2022-07-01 13:22:06,591:INFO:output_depth_images:pih_1.png finished processing! Image can be found in the output_images folder.
+2022-07-01 13:22:06,617:INFO:output_depth_images:pih_1_depth_colored.png finished processing! Image can be found in the output_images folder.
+2022-07-01 13:22:06,626:INFO:output_depth_images:pih_1_depth.png finished processing! Image can be found in the output_images folder.
+2022-07-01 13:22:07,540:INFO:output_depth_images:pih_1_upscaled_depth_colored.png finished processing! Image can be found in the output_images folder.
+2022-07-01 13:22:07,837:INFO:output_depth_images:pih_1_upscaled_depth.png finished processing! Image can be found in the output_images folder.
